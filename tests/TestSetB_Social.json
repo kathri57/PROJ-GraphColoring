@@ -1,0 +1,11 @@
+{"TestSet": {
+  "eid": "e_2YJkbDOblU4M",
+  "LastModified": 1794066817,
+  "Author": "btrivunovic",
+  "Date": "June 2026",
+  "ShortName": "TSB",
+  "Description": "Real-world social network graphs: Zachary Karate Club (34 vertices, 78 edges), Zebra (27, 111), Dolphin (62, 159), Florentine Families (15, 20), Davis Southern Women (32, 89, bipartite).",
+  "N": 5,
+  "TestRepeat": 5,
+  "TimeLimit": 10
+}}

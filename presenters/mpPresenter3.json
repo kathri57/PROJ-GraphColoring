@@ -1,0 +1,78 @@
+{
+  "Presenter": {
+    "Author": "btrivunovic",
+    "Date": "June 2026",
+    "Title": "Random graphs - colors and time vs. graph size",
+    "ShortTitle": "Random graphs",
+    "Description": "Quality (NumColors) and time (Tmin) of all algorithms on Erdos-Renyi random graphs of varying size and density.",
+    "Query": {
+      "Algorithms": [
+        "*"
+      ],
+      "ComputerID": "",
+      "Count": false,
+      "Filter": [],
+      "GroupBy": [
+        "N"
+      ],
+      "Indicators": [
+        "*EM"
+      ],
+      "Parameters": [
+        "N",
+        "P"
+      ],
+      "SortBy": [],
+      "TestSets": [
+        "TestSetC_Random"
+      ]
+    },
+    "Layout": [
+      [
+        "TextBox_1"
+      ],
+      [
+        "Graph_1"
+      ],
+      [
+        "Graph_2"
+      ]
+    ],
+    "TextBox_1": {
+      "htmltext": "<div>Erdos-Renyi random graphs G(n, p) allow systematic analysis of algorithm behaviour as size (n) and density (p) increase. RLF and MSISCA are expected to outperform Greedy, Welsh-Powell and DSatur in terms of number of colors, at the cost of higher execution time.</div>"
+    },
+    "Graph_1": {
+      "xAxis": "N",
+      "yAxes": [
+        "*.NumColors"
+      ],
+      "graphTypes": "",
+      "xAxisTitle": "Number of vertices (N)",
+      "yAxisTitle": "Number of colors used",
+      "categoryLabels": false,
+      "gridX": false,
+      "gridY": true,
+      "logScale": false,
+      "manData": {},
+      "subchart": false,
+      "zoom": true
+    },
+    "Graph_2": {
+      "xAxis": "N",
+      "yAxes": [
+        "*.Tmin"
+      ],
+      "graphTypes": "",
+      "xAxisTitle": "Number of vertices (N)",
+      "yAxisTitle": "Execution time (µs)",
+      "categoryLabels": false,
+      "gridX": false,
+      "gridY": true,
+      "logScale": true,
+      "manData": {},
+      "subchart": false,
+      "zoom": true
+    },
+    "eid": "e_F2Q5ikYLSIv3"
+  }
+}

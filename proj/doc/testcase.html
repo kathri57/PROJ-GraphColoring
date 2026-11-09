@@ -1,0 +1,66 @@
+<h3>Test cases</h3>
+
+<p>
+In this project, a test case is a single, simple, undirected,
+unweighted graph G&nbsp;=&nbsp;(V,&nbsp;E). A graph is represented by:
+</p>
+
+<ul>
+  <li><b>n</b> &mdash; the number of vertices (labeled 0, 1, &hellip;, n&minus;1),</li>
+  <li><b>edges</b> &mdash; a list of vertex pairs {u, v}, each representing one
+      undirected edge,</li>
+  <li><b>graphName</b> &mdash; a human-readable name of the graph (e.g.
+      "Petersen", "Zachary Karate", "G(100,0.4)"), used for identification
+      in result tables and graphs.</li>
+</ul>
+
+<p>
+For Java programs, the test case input is declared as:
+</p>
+
+<pre>
+public class Input extends AbstractInput {
+  public int n;
+  public int[][] edges;
+  public String graphName;
+}
+</pre>
+
+<h3>Algorithm output</h3>
+
+<p>
+The goal of each algorithm is to compute a valid coloring of the input
+graph, i.e. an assignment of a positive integer color to every vertex
+such that no two adjacent vertices share the same color:
+</p>
+
+<pre>
+public class Output extends AbstractOutput {
+  public int[] color;   // color[v] is the color assigned to vertex v
+}
+</pre>
+
+<h3>Test of correctness</h3>
+
+<p>
+Unlike problems such as sorting, the Graph Coloring Problem does not
+have a single correct output: many valid colorings exist for the same
+graph, often using different numbers of colors. For this reason,
+correctness is <b>not</b> checked by comparing the algorithm's output
+against one fixed expected output. Instead, the produced coloring is
+re-validated directly against the input graph:
+</p>
+
+<ul>
+  <li>every vertex must be assigned a positive color, and</li>
+  <li>for every edge {u, v} &isin; E, it must hold that color(u) &ne; color(v).</li>
+</ul>
+
+<p>
+This check is implemented by the <code>Check</code> indicator, which
+reports <code>OK</code> if the coloring is valid and <code>NOK</code>
+otherwise. The quality of a (valid) coloring is then measured by the
+separate <code>NumColors</code> indicator &mdash; the number of distinct
+colors used. Lower values indicate a better, more efficient coloring
+(closer to the graph's true chromatic number &chi;(G)).
+</p>

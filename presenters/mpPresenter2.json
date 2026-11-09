@@ -1,0 +1,61 @@
+{
+  "Presenter": {
+    "Author": "btrivunovic",
+    "Date": "June 2026",
+    "Title": "Social network graphs - number of colors",
+    "ShortTitle": "Social networks",
+    "Description": "Comparison of algorithms on real-world social network graphs.",
+    "Query": {
+      "Algorithms": [
+        "*"
+      ],
+      "ComputerID": "",
+      "Count": false,
+      "Filter": [],
+      "GroupBy": [],
+      "Indicators": [
+        "*EM"
+      ],
+      "Parameters": [],
+      "SortBy": [],
+      "TestSets": [
+        "TestSetB_Social"
+      ]
+    },
+    "Layout": [
+      [
+        "TextBox_1"
+      ],
+      [
+        "Table_1",
+        "Graph_1"
+      ]
+    ],
+    "TextBox_1": {
+      "htmltext": "<div>Real-world social network graphs (Zachary Karate Club, Zebra, Dolphin, Florentine Families, Davis Southern Women) have heterogeneous degree distributions, unlike classic or random graphs. This often reveals differences between algorithms that are not visible on simpler structures.</div>"
+    },
+    "Table_1": {
+      "Columns": [
+        "*.NumColors",
+        "*.Check"
+      ]
+    },
+    "Graph_1": {
+      "xAxis": "TestID",
+      "yAxes": [
+        "*.NumColors"
+      ],
+      "graphTypes": "",
+      "xAxisTitle": "Graph",
+      "yAxisTitle": "Number of colors",
+      "categoryLabels": true,
+      "gridX": false,
+      "gridY": true,
+      "logScale": false,
+      "manData": {},
+      "subchart": false,
+      "zoom": false
+    },
+    "eid": "e_88a80wIXF86l"
+  }
+}

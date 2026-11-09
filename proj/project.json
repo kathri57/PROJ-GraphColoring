@@ -1,0 +1,39 @@
+{"Project": {
+  "Name": "GraphColoring",
+  "eid": "e_IKoAxTJXdFZ9",
+  "LastModified": 1794066817,
+  "ShortTitle": "Graph Coloring Algorithms Comparison",
+  "Description": "This project compares five heuristic algorithms for the Graph Coloring Problem: Greedy, Welsh-Powell, DSatur, RLF (Recursive Largest First), and MSISCA (Malatya Sequential Independent Set Coloring Algorithm). Algorithms are evaluated on four groups of test graphs: classic graphs with known chromatic numbers, real-world social network graphs, random Erdos-Renyi graphs, and DIMACS-style benchmark graphs (Queen and Mycielski graphs). The main quality indicator is the number of colors used (NumColors); execution time is measured to assess the time/quality trade-off of each algorithm.",
+  "Author": "btrivunovic",
+  "Date": "06, 2026",
+  "Algorithms": [
+    "Greedy",
+    "WelshPowell",
+    "DSatur",
+    "RLF",
+    "MSISCA"
+  ],
+  "TestSets": [
+    "TestSetA_Classic",
+    "TestSetB_Social",
+    "TestSetC_Random",
+    "TestSetD_Benchmark"
+  ],
+  "Tags": [
+    "graph",
+    "graph-coloring",
+    "chromatic-number",
+    "heuristics",
+    "NP-hard"
+  ],
+  "ProjectJARs": ["graphcoloring.jar"],
+  "EMExecFamily": "F0",
+  "CNTExecFamily": "F0",
+  "ProjPresenters": [
+    "mpPresenter1",
+    "mpPresenter2",
+    "mpPresenter3",
+    "mpPresenter4"
+  ],
+  "AlgPresenters": []
+}}

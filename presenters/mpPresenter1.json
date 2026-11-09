@@ -1,0 +1,45 @@
+{
+  "Presenter": {
+    "Author": "btrivunovic",
+    "Date": "June 2026",
+    "Title": "Classic graphs - number of colors",
+    "ShortTitle": "Classic graphs",
+    "Description": "Number of colors and execution time on classic graphs with known chromatic numbers.",
+    "Query": {
+      "Algorithms": [
+        "*"
+      ],
+      "ComputerID": "",
+      "Count": false,
+      "Filter": [],
+      "GroupBy": [],
+      "Indicators": [
+        "*EM"
+      ],
+      "Parameters": [],
+      "SortBy": [],
+      "TestSets": [
+        "TestSetA_Classic"
+      ]
+    },
+    "Layout": [
+      [
+        "TextBox_1"
+      ],
+      [
+        "Table_1"
+      ]
+    ],
+    "TextBox_1": {
+      "htmltext": "<div>On classic graphs (Petersen, cycles, complete graph, star, path), all five algorithms are expected to reach the optimal (chromatic) number of colors, since these graphs have simple, regular structure. This test set primarily verifies the correctness of the algorithm implementations.</div>"
+    },
+    "Table_1": {
+      "Columns": [
+        "*.NumColors",
+        "*.Tmin",
+        "*.Check"
+      ]
+    },
+    "eid": "e_Z6PwV2VbnZ2x"
+  }
+}

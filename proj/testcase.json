@@ -1,0 +1,100 @@
+{"TestCase": {
+  "InputParameters": [
+    "GraphType",
+    "GraphParam",
+    "N",
+    "P",
+    "Seed",
+    "Filename",
+    "GraphName"
+  ],
+  "Parameters": [
+    {
+      "Name": "GraphType",
+      "Description": "The kind of graph to generate: PETERSEN, CYCLE, COMPLETE, STAR, PATH (Type0); QUEEN, MYCIEL (Type2).",
+      "Type": "enum",
+      "Meta": {
+        "Values": ["PETERSEN", "CYCLE", "COMPLETE", "STAR", "PATH", "QUEEN", "MYCIEL"],
+        "Default": "PETERSEN"
+      }
+    },
+    {
+      "Name": "GraphParam",
+      "Description": "Structural parameter of the graph (number of vertices for CYCLE/COMPLETE/PATH, number of leaves for STAR, board size n for QUEEN, chromatic number k for MYCIEL).",
+      "Type": "int",
+      "Meta": {
+        "Min": "1",
+        "Max": "10000",
+        "Step": "1",
+        "Default": "10"
+      }
+    },
+    {
+      "Name": "N",
+      "Description": "Number of vertices, used by the Erdos-Renyi random graph generator (Type1).",
+      "Type": "int",
+      "Meta": {
+        "Min": "1",
+        "Max": "1000000",
+        "Step": "1",
+        "Default": "100"
+      }
+    },
+    {
+      "Name": "P",
+      "Description": "Edge probability (0..1), used by the Erdos-Renyi random graph generator (Type1).",
+      "Type": "double",
+      "Meta": {
+        "Min": "0.0",
+        "Max": "1.0",
+        "Step": "0.01",
+        "Default": "0.2"
+      }
+    },
+    {
+      "Name": "Seed",
+      "Description": "Random seed for reproducible random graph generation (Type1).",
+      "Type": "int",
+      "Meta": {
+        "Min": "0",
+        "Max": "1000000",
+        "Step": "1",
+        "Default": "42"
+      }
+    },
+    {
+      "Name": "Filename",
+      "Description": "Name of the edge-list resource file for real-world social network graphs (Type3).",
+      "Type": "string",
+      "Meta": {"Default": ""}
+    },
+    {
+      "Name": "GraphName",
+      "Description": "Human-readable name of the graph, shown in results (Type3).",
+      "Type": "string",
+      "Meta": {"Default": ""}
+    }
+  ],
+  "Generators": [
+    {
+      "Type": "Type0",
+      "Description": "Classic named graphs: Petersen, cycles, complete graphs, star graphs, paths.",
+      "GeneratingParameters": ["GraphType", "GraphParam"]
+    },
+    {
+      "Type": "Type1",
+      "Description": "Erdos-Renyi random graph G(N, P) with a given seed.",
+      "GeneratingParameters": ["N", "P", "Seed"]
+    },
+    {
+      "Type": "Type2",
+      "Description": "DIMACS-style benchmark graphs: Queen(n,n) and Mycielski Myciel(k).",
+      "GeneratingParameters": ["GraphType", "GraphParam"]
+    },
+    {
+      "Type": "Type3",
+      "Description": "Real-world social network graphs read from an edge-list resource file: Zachary Karate Club, Zebra, Dolphin, Florentine Families, Davis Southern Women.",
+      "GeneratingParameters": ["Filename", "GraphName"]
+    }
+  ]
+}}

@@ -1,0 +1,80 @@
+<h3>Algorithms</h3>
+
+<p>
+A graph coloring algorithm computes, for a given input graph, an
+assignment of colors (positive integers) to vertices such that no two
+adjacent vertices share the same color, using as few colors as
+possible.
+</p>
+
+<table border="1" cellpadding="4" cellspacing="0">
+  <tr><th>Input</th><td>A graph, given as a vertex count and a list of edges.</td></tr>
+  <tr><th>Output</th><td>An array <code>color[]</code>, where <code>color[v]</code>
+      is the color assigned to vertex v.</td></tr>
+  <tr><th>Test of correctness</th><td>The execution of an algorithm on a given graph
+      is correct if, for every edge {u, v} in the graph,
+      <code>color[u] &ne; color[v]</code> holds, and every vertex has been
+      assigned a positive color.</td></tr>
+</table>
+
+<h3>Implementation</h3>
+
+<p>
+To implement a graph coloring algorithm, the author has to write a Java
+class that extends <code>ProjectAbstractAlgorithm</code> and overrides
+the <code>execute(Input)</code> method.
+</p>
+
+<p>An example of a (greedy) graph coloring algorithm is the following:</p>
+
+<pre>
+public class Algorithm extends ProjectAbstractAlgorithm {
+
+  @Override
+  protected Output execute(Input input) {
+    int n = input.n;
+    List&lt;List&lt;Integer&gt;&gt; adj = buildAdjacency(n, input.edges);
+
+    int[] color = new int[n];
+    for (int v = 0; v &lt; n; v++) {
+      color[v] = smallestFree(adj, v, color);
+    }
+
+    return new Output(color);
+  }
+
+  // ... helper methods buildAdjacency(), smallestFree() ...
+}
+</pre>
+
+<h3>Algorithms implemented in this project</h3>
+
+<ul>
+  <li><b>Greedy</b> &mdash; O(|V| + |E|). Colors vertices in natural order;
+      no global structural information is used.</li>
+  <li><b>Welsh&ndash;Powell</b> &mdash; O(|V| log|V| + |E|). Greedy coloring
+      after sorting vertices by decreasing degree.</li>
+  <li><b>DSatur</b> &mdash; O(|V|&sup2;) (naive). At each step colors the
+      vertex with the highest saturation degree.</li>
+  <li><b>RLF</b> &mdash; O(|V|&middot;(|V|+|E|)). Builds independent sets
+      (color classes) one at a time, using a two-set bookkeeping
+      strategy (candidates C, excluded X).</li>
+  <li><b>MSISCA</b> &mdash; O(|V|&sup2;&middot;&Delta;&middot;k). Builds sequent
+      independent sets using the Malatya centrality measure
+      &psi;(v) = &Sigma; d(v)/d(u) over neighbours u of v.</li>
+</ul>
+
+<h3>References</h3>
+<ul>
+  <li>Br&eacute;laz, D. (1979). New methods to color the vertices of a graph.
+      <i>Communications of the ACM</i>, 22(4), 251&ndash;256.</li>
+  <li>Leighton, F. T. (1979). A graph coloring algorithm for large
+      scheduling problems. <i>Journal of Research of the National Bureau
+      of Standards</i>, 84(6), 489&ndash;506.</li>
+  <li>Welsh, D. J. A., Powell, M. B. (1967). An upper bound for the
+      chromatic number of a graph and its application to timetabling
+      problems. <i>The Computer Journal</i>, 10(1), 85&ndash;86.</li>
+  <li>Yakut, S. (2025). A robust and efficient algorithm for graph
+      coloring problem based on Malatya centrality and sequent
+      independent sets. <i>Egyptian Informatics Journal</i>, 30, 100676.</li>
+</ul>

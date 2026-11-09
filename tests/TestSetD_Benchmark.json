@@ -1,0 +1,11 @@
+{"TestSet": {
+  "eid": "e_YOYUHGjVqZdF",
+  "LastModified": 1794066817,
+  "Author": "btrivunovic",
+  "Date": "June 2026",
+  "ShortName": "TSD",
+  "Description": "DIMACS-style benchmark graphs: Queen(n,n) for n=5..10 (chromatic number at least n), and Mycielski graphs Myciel(k) for k=3..7 (triangle-free, chromatic number k).",
+  "N": 11,
+  "TestRepeat": 3,
+  "TimeLimit": 30
+}}

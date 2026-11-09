@@ -1,0 +1,11 @@
+Type2:test1:QUEEN:5
+Type2:test2:QUEEN:6
+Type2:test3:QUEEN:7
+Type2:test4:QUEEN:8
+Type2:test5:QUEEN:9
+Type2:test6:QUEEN:10
+Type2:test7:MYCIEL:3
+Type2:test8:MYCIEL:4
+Type2:test9:MYCIEL:5
+Type2:test10:MYCIEL:6
+Type2:test11:MYCIEL:7

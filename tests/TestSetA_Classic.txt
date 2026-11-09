@@ -1,0 +1,6 @@
+Type0:test1:PETERSEN:10
+Type0:test2:CYCLE:9
+Type0:test3:CYCLE:12
+Type0:test4:COMPLETE:6
+Type0:test5:STAR:8
+Type0:test6:PATH:10

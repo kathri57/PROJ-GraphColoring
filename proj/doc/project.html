@@ -1,0 +1,83 @@
+<h3>The Graph Coloring Problem</h3>
+
+<p>
+The Graph Coloring Problem (GCP) is a classic and well-studied problem in
+graph theory and computer science. Given an undirected graph
+G&nbsp;=&nbsp;(V,&nbsp;E), the goal is to assign a color to each vertex such
+that no two adjacent vertices share the same color, while using the
+smallest possible number of colors. This minimum number of colors is
+called the <b>chromatic number</b> of the graph, denoted &chi;(G).
+</p>
+
+<p>
+More formally, a coloring is a function c: V &rarr; {1, 2, &hellip;, k}
+such that for every edge {u, v} &isin; E it holds that c(u) &ne; c(v).
+The Graph Coloring Problem asks for a coloring that uses the minimum
+possible value of k.
+</p>
+
+<p>
+GCP is a well-known <b>NP-hard</b> problem: no polynomial-time algorithm
+is known that solves it optimally for arbitrary graphs, and none is
+believed to exist (unless P&nbsp;=&nbsp;NP). Despite this theoretical
+hardness, GCP has numerous practical applications, including:
+</p>
+
+<ul>
+  <li>scheduling (exam timetabling, course scheduling),</li>
+  <li>frequency assignment in wireless networks,</li>
+  <li>register allocation in compilers,</li>
+  <li>map coloring,</li>
+  <li>traffic signal optimization,</li>
+  <li>clustering and community detection in social networks.</li>
+</ul>
+
+<h3>This project</h3>
+
+<p>
+This project compares five heuristic algorithms for the Graph Coloring
+Problem:
+</p>
+
+<ul>
+  <li><b>Greedy</b> &mdash; colors vertices in their natural order, assigning
+      each vertex the smallest color not used by its already-colored
+      neighbours.</li>
+  <li><b>Welsh&ndash;Powell</b> &mdash; an improvement over Greedy that first
+      sorts vertices in decreasing order of degree.</li>
+  <li><b>DSatur</b> (Br&eacute;laz, 1979) &mdash; dynamically colors the
+      vertex with the highest saturation degree (number of distinct
+      colors among its colored neighbours) at each step.</li>
+  <li><b>RLF</b> (Recursive Largest First; Leighton, 1979) &mdash; builds
+      one independent set (color class) at a time, greedily maximizing
+      its size.</li>
+  <li><b>MSISCA</b> (Malatya Sequential Independent Set Coloring Algorithm;
+      Yakut, 2025) &mdash; builds sequent independent sets by repeatedly
+      selecting the vertex with minimum <i>Malatya centrality</i>.</li>
+</ul>
+
+<p>
+Since none of these heuristics guarantees an optimal solution, the
+project evaluates and compares them across four groups of test graphs
+(see the <i>Test sets</i> tab) with respect to two main indicators:
+the <b>number of colors</b> used (a measure of solution quality) and
+the <b>execution time</b> (a measure of efficiency).
+</p>
+
+<h3>References</h3>
+<ul>
+  <li>Garey, M. R., Johnson, D. S. (1979). <i>Computers and
+      Intractability: A Guide to the Theory of NP-Completeness</i>.
+      W. H. Freeman.</li>
+  <li>Br&eacute;laz, D. (1979). New methods to color the vertices of a
+      graph. <i>Communications of the ACM</i>, 22(4), 251&ndash;256.</li>
+  <li>Leighton, F. T. (1979). A graph coloring algorithm for large
+      scheduling problems. <i>Journal of Research of the National
+      Bureau of Standards</i>, 84(6), 489&ndash;506.</li>
+  <li>Welsh, D. J. A., Powell, M. B. (1967). An upper bound for the
+      chromatic number of a graph and its application to timetabling
+      problems. <i>The Computer Journal</i>, 10(1), 85&ndash;86.</li>
+  <li>Yakut, S. (2025). A robust and efficient algorithm for graph
+      coloring problem based on Malatya centrality and sequent
+      independent sets. <i>Egyptian Informatics Journal</i>, 30, 100676.</li>
+</ul>

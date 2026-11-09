@@ -1,0 +1,9 @@
+{"Algorithm": {
+  "eid": "e_gy2Mam672jcM",
+  "LastModified": 1794066817,
+  "ShortName": "RLF",
+  "Description": "Recursive Largest First (Leighton, 1979): builds one independent set (color class) at a time by iteratively adding vertices that maximize exclusion of remaining candidates. Time complexity: O(|V|*(|V|+|E|)).",
+  "Author": "btrivunovic",
+  "Date": "June 2026",
+  "Language": "Java"
+}}

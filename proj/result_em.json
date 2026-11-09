@@ -1,0 +1,68 @@
+{"Result": {
+  "IndicatorsOrder": [
+    "Tfirst",
+    "Tmin",
+    "Tavg",
+    "Tall",
+    "Tsum",
+    "Check",
+    "NumColors"
+  ],
+  "Indicators": [
+    {
+      "Name": "Tfirst",
+      "Description": "The first measured time for a given test case.",
+      "Type": "timer",
+      "Meta": {
+        "ID": 0,
+        "STAT": "FIRST"
+      }
+    },
+    {
+      "Name": "Tall",
+      "Description": "All measured times for a given test case.",
+      "Type": "timer",
+      "Meta": {
+        "ID": 0,
+        "STAT": "ALL"
+      }
+    },
+    {
+      "Name": "Tmin",
+      "Description": "The minimal measured time for a given test case.",
+      "Type": "timer",
+      "Meta": {
+        "ID": 0,
+        "STAT": "MIN"
+      }
+    },
+    {
+      "Name": "Tavg",
+      "Description": "The average of all measured times for a given test case.",
+      "Type": "timer",
+      "Meta": {
+        "ID": 0,
+        "STAT": "AVG"
+      }
+    },
+    {
+      "Name": "Tsum",
+      "Description": "The sum of all measured times for a given test case.",
+      "Type": "timer",
+      "Meta": {
+        "ID": 0,
+        "STAT": "SUM"
+      }
+    },
+    {
+      "Name": "Check",
+      "Description": "Checks the correctness of the produced coloring: 'OK' if no two adjacent vertices share the same color, 'NOK' otherwise.",
+      "Type": "string"
+    },
+    {
+      "Name": "NumColors",
+      "Description": "The number of distinct colors used by the algorithm's coloring. Lower is better (closer to the graph's chromatic number).",
+      "Type": "int"
+    }
+  ]
+}}

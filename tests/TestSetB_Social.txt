@@ -1,0 +1,5 @@
+Type3:test1:zachary.txt:Zachary Karate
+Type3:test2:zebra.txt:Zebra
+Type3:test3:dolphin.txt:Dolphin
+Type3:test4:florentine.txt:Florentine families
+Type3:test5:davis.txt:Davis southern women

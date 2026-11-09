@@ -1,0 +1,9 @@
+{"Algorithm": {
+  "eid": "e_B6uZxoAsi286",
+  "LastModified": 1794066817,
+  "ShortName": "Greedy",
+  "Description": "Greedy graph coloring: each vertex gets the smallest color not used by its already-colored neighbours, processed in natural vertex order. Time complexity: O(|V|+|E|).",
+  "Author": "btrivunovic",
+  "Date": "June 2026",
+  "Language": "Java"
+}}

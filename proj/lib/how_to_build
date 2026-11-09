@@ -1,0 +1,23 @@
+How to build graphcoloring.jar
+================================
+
+The project uses one helper class, graphcoloring.Tools, packaged into
+graphcoloring.jar and attached to the project via the "ProjectJARs"
+property in proj/project.json.
+
+From this directory (proj/lib), run:
+
+    javac -d build graphcoloring/Tools.java
+    cd build
+    jar cf ../graphcoloring.jar graphcoloring
+    cd ..
+
+This produces proj/lib/graphcoloring.jar, which ALGator will put on
+the classpath of every algorithm in this project (see Output.java, 
+which calls graphcoloring.Tools.intArrayToString(), and
+IndicatorTest_Check.java / IndicatorTest_NumColors.java, which call
+graphcoloring.Tools.isValidColoring() and .numColors()).
+
+After (re)building the jar, re-run the project's "build" step from the
+ALGator web UI (or algator.sh) so that all five algorithms are
+recompiled against the updated jar.

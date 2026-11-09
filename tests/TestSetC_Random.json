@@ -1,0 +1,11 @@
+{"TestSet": {
+  "eid": "e_vP1tgpRrYF6U",
+  "LastModified": 1794066817,
+  "Author": "btrivunovic",
+  "Date": "June 2026",
+  "ShortName": "TSC",
+  "Description": "Erdos-Renyi random graphs G(n, p) for n in {100, 200, 400, 600, 800, 1000} and p in {0.2, 0.4, 0.6, 0.8} (24 graphs total). Seeds increase sequentially starting at 42 for reproducibility.",
+  "N": 24,
+  "TestRepeat": 1,
+  "TimeLimit": 30
+}}

@@ -1,0 +1,11 @@
+{"TestSet": {
+  "eid": "e_i8Hc4RpGgq96",
+  "LastModified": 1794066817,
+  "Author": "btrivunovic",
+  "Date": "June 2026",
+  "ShortName": "TSA",
+  "Description": "Classic graphs with analytically known chromatic numbers: Petersen graph, cycles C9/C12, complete graph K6, star graph S8, path P10. Used to verify correctness of algorithm implementations.",
+  "N": 6,
+  "TestRepeat": 5,
+  "TimeLimit": 5
+}}

@@ -1,0 +1,56 @@
+<h3>Test sets</h3>
+
+<p>
+To evaluate the algorithms across diverse graph structures, this
+project uses four test sets, each focusing on a different class of
+graphs.
+</p>
+
+<h4>TestSetA_Classic &mdash; Classic graphs</h4>
+<p>
+Six graphs with analytically known chromatic numbers: the Petersen
+graph (&chi;=3), cycles C9 (&chi;=3) and C12 (&chi;=2), the complete
+graph K6 (&chi;=6), the star graph S8 (&chi;=2), and the path P10
+(&chi;=2). This test set is primarily used to verify the correctness
+of the algorithm implementations: all five algorithms are expected to
+reach the optimal number of colors on these simple, regular graphs.
+</p>
+
+<h4>TestSetB_Social &mdash; Social network graphs</h4>
+<p>
+Five well-known real-world social network datasets: the Zachary Karate
+Club (34 vertices, 78 edges), the Grevy's Zebra interaction network
+(27, 111), the Doubtful Sound Dolphin community (62, 159), the
+Florentine Families marriage network (15, 20), and the Davis
+Southern Women bipartite attendance network (32, 89). These graphs
+have heterogeneous, non-uniform degree distributions, which often
+reveals differences between algorithms that are not visible on simpler
+or random graphs.
+</p>
+
+<h4>TestSetC_Random &mdash; Erd&odblac;s&ndash;R&eacute;nyi random graphs</h4>
+<p>
+Twenty-four random graphs G(n, p), generated for every combination of
+n &isin; {100, 200, 400, 600, 800, 1000} and p &isin; {0.2, 0.4, 0.6,
+0.8}, using a fixed seed for each graph (42-65), so the graphs are reproducible. This test set allows a
+systematic study of how algorithm performance (both number of colors
+and execution time) scales with graph size and edge density.
+</p>
+
+<h4>TestSetD_Benchmark &mdash; DIMACS-style benchmark graphs</h4>
+<p>
+Eleven structured benchmark graphs commonly used in the graph coloring
+literature:
+</p>
+<ul>
+  <li><b>Queen(n,n)</b> graphs for n = 5, &hellip;, 10 &mdash; vertices
+      correspond to squares of an n&times;n chessboard, with two
+      vertices adjacent if a queen could move between them (same row,
+      column, or diagonal). The chromatic number of Queen(n,n) is at least n; 
+      it equals n when n mod 6 is 1 or 5. </li>
+  <li><b>Mycielski graphs</b> Myciel(k) for k = 3, &hellip;, 7 &mdash;
+      triangle-free graphs with chromatic number k, constructed
+      iteratively via the Mycielski construction. They demonstrate that
+      a high chromatic number does not require large cliques or dense
+      structure.</li>
+</ul>

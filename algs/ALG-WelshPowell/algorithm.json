@@ -1,0 +1,9 @@
+{"Algorithm": {
+  "eid": "e_ddDT75VeUFb9",
+  "LastModified": 1794066817,
+  "ShortName": "WP",
+  "Description": "Welsh-Powell graph coloring: vertices are sorted in decreasing order of degree before greedy coloring. Time complexity: O(|V| log|V| + |E|).",
+  "Author": "btrivunovic",
+  "Date": "June 2026",
+  "Language": "Java"
+}}

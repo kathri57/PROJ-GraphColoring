@@ -1,0 +1,45 @@
+{
+  "Presenter": {
+    "Author": "btrivunovic",
+    "Date": "June 2026",
+    "Title": "Benchmark graphs (Queen, Mycielski) - number of colors",
+    "ShortTitle": "Benchmark graphs",
+    "Description": "Comparison of algorithms on DIMACS-style benchmark graphs: Queen(n,n) for n=5..10 and Mycielski Myciel(k) for k=3..7.",
+    "Query": {
+      "Algorithms": [
+        "*"
+      ],
+      "ComputerID": "",
+      "Count": false,
+      "Filter": [],
+      "GroupBy": [],
+      "Indicators": [
+        "*EM"
+      ],
+      "Parameters": [],
+      "SortBy": [],
+      "TestSets": [
+        "TestSetD_Benchmark"
+      ]
+    },
+    "Layout": [
+      [
+        "TextBox_1"
+      ],
+      [
+        "Table_1"
+      ]
+    ],
+    "TextBox_1": {
+      "htmltext": "<div>Queen graphs are dense and highly structured (chromatic number at least n for Queen(n,n)), and reveal substantial differences between algorithms. Mycielski graphs are triangle-free with chromatic number k. In the conducted experiments, all five algorithms colored the tested Mycielski graphs optimally.</div>"
+    },
+    "Table_1": {
+      "Columns": [
+        "*.NumColors",
+        "*.Tmin",
+        "*.Check"
+      ]
+    },
+    "eid": "e_8euMvHVOw4e1"
+  }
+}

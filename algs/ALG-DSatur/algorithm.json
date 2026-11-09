@@ -1,0 +1,9 @@
+{"Algorithm": {
+  "eid": "e_WuZbQkZaXx95",
+  "LastModified": 1794066817,
+  "ShortName": "DSatur",
+  "Description": "DSatur (Brelaz, 1979): at each step, colors the vertex with the highest saturation degree (number of distinct colors among colored neighbours). Naive time complexity: O(|V|^2).",
+  "Author": "btrivunovic",
+  "Date": "June 2026",
+  "Language": "Java"
+}}
