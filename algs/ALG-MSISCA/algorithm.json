@@ -2,7 +2,7 @@
   "eid": "e_JhrsBg88mpVO",
   "LastModified": 1794066817,
   "ShortName": "MSISCA",
-  "Description": "Malatya Sequential Independent Set Coloring Algorithm (Yakut, 2025): builds sequent independent sets by repeatedly selecting the vertex with minimum Malatya centrality psi(v) = sum d(v)/d(u) over neighbours u. Time complexity: O(|V|^2*Delta*k).",
+  "Description": "Malatya Sequential Independent Set Coloring Algorithm (Yakut, 2025): builds sequential independent sets by repeatedly selecting the vertex with minimum Malatya centrality psi(v) = sum d(v)/d(u) over neighbours u. Time complexity: O(|V|^2*Delta*k).",
   "Author": "btrivunovic",
   "Date": "June 2026",
   "Language": "Java"

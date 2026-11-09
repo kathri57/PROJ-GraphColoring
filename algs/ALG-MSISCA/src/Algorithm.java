@@ -13,7 +13,7 @@ import java.util.List;
  * its (higher-degree) neighbours, making it a good candidate for
  * an independent set.
  *
- * The algorithm repeatedly builds a sequent independent set (SIS) by
+ * The algorithm repeatedly builds a sequential independent set (SIS) by
  * picking the active vertex with the minimum Malatya centrality,
  * adding it to the SIS, and removing it together with its neighbours
  * from the active set. Each SIS is colored with one new color.
@@ -74,7 +74,7 @@ public class Algorithm extends ProjectAbstractAlgorithm {
     return psi;
   }
 
-  /** Builds one sequent independent set of currently active vertices. */
+  /** Builds one sequential independent set of currently active vertices. */
   private List<Integer> buildSIS(List<List<Integer>> adj, int n, boolean[] baseActive) {
     boolean[] temp = Arrays.copyOf(baseActive, baseActive.length);
 
